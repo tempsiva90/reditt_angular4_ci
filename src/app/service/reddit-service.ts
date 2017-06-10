@@ -66,7 +66,7 @@ getPostList(postName){
 }//getpostList ends
 
 
-getPost(post_id)
+getPost(post_id:string)
 {
   this.selectedPost=null;
  // let post_id;

@@ -1,25 +1,22 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { SearchContainerComponent } from './search-container.component';
 
 describe('SearchContainerComponent', () => {
-  let component: SearchContainerComponent;
-  let fixture: ComponentFixture<SearchContainerComponent>;
+    let comp: SearchContainerComponent;
+    let fixture: ComponentFixture<SearchContainerComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ SearchContainerComponent ]
-    })
-    .compileComponents();
-  }));
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            declarations: [ SearchContainerComponent ],
+            schemas: [ NO_ERRORS_SCHEMA ]
+        });
+        fixture = TestBed.createComponent(SearchContainerComponent);
+        comp = fixture.componentInstance;
+    });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(SearchContainerComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    it('can load instance', () => {
+        expect(comp).toBeTruthy();
+    });
 
-  it('should be created', () => {
-    expect(component).toBeTruthy();
-  });
 });
