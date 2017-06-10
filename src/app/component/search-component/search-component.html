@@ -1,0 +1,19 @@
+<form [formGroup]="rForm" (ngSubmit)="triggerGetPost(rForm.value)">
+<md-input-container>
+  <input mdInput type="text" 
+          formControlName="redditSearch"
+          placeholder="Reddit search...Min 5 Char"
+           >
+  
+</md-input-container>
+  
+  <!--<input  >-->
+  <button type="submit"
+  md-button
+  
+ 
+   value="Search" [disabled]="!rForm.valid">Search
+  
+  </button>
+  <!--</input>-->
+</form>

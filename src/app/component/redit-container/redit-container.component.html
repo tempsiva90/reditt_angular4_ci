@@ -3,10 +3,18 @@
     This child component display list of reddit data in the view
   to customize this list item go to reddit-list-item-component
 -->
- <result-list-item 
-          *ngFor="let post of posts" 
-          [post]="post"
-        >
-  </result-list-item>
 
 
+<md-card>
+  <md-card-title>Result Container</md-card-title>
+
+  <md-card-content>
+    <md-list>
+    <result-list-item 
+              *ngFor="let post of postList | async" 
+              [post]="post"
+            >
+      </result-list-item>
+    </md-list>
+  </md-card-content>
+</md-card>

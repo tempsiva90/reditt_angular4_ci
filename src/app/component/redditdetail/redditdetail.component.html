@@ -1,0 +1,47 @@
+
+ <!--<button md-button md-button-raised-->
+ <a [routerLink]="['/reddit']"         routerLinkActive="active"       >                     Back     </a> 
+ <!--</button>-->
+
+<md-toolbar color="primary">
+  
+  <md-list>
+    <md-list-item >
+            
+            <img class="author" md-list-avatar src="{{redditService.selectedPost.thumbnail}}" alt="redditService.selectedPost.title">
+            <h3 md-line class="author_title" style="color:white"> {{redditService.selectedPost.author}} </h3>
+            <p md-line>
+          
+            <span> {{post.score}} </span>
+            <span>{{post.post_hint}}</span>
+            </p>
+      </md-list-item>
+ </md-list>
+ <span class="example-spacer"></span>
+   
+  
+</md-toolbar>
+<md-card class="example-card">
+  <md-card-header>
+    <h1> <span> {{redditService.selectedPost.title}} </span></h1>
+    <md-card-subtitle>Likes : <span>{{redditService.selectedPost.score}} </span></md-card-subtitle>
+     Comments : {{redditService.selectedPost.num_comments}}
+    
+  </md-card-header>
+ 
+ 
+  <md-card-content>
+   
+
+    <div *ngIf="redditService.selectedPost.post_hint=='image'" >
+        <img md-card-image src="{{redditService.selectedPost.url}}" width="200px" height="200px">
+  </div>
+
+
+  </md-card-content>
+  <md-card-actions>
+    
+    <button md-button>LIKE</button>
+    <button md-button>SHARE</button>
+  </md-card-actions>
+</md-card>
