@@ -10,11 +10,11 @@ import {RedditService} from "../../service/reddit-service";
   styleUrls: ['./redditdetail.component.sass']
 })
 export class RedditdetailComponent implements OnInit,AfterViewInit {
-private post
+public post
   constructor(public snackBar: MdSnackBar,
-              private redditService:RedditService,
-              private route: ActivatedRoute,
-              private router: Router,) { }
+              public redditService:RedditService,
+              public route: ActivatedRoute,
+              public router: Router,) { }
 
   ngOnInit() {
    
